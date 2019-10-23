@@ -93,32 +93,43 @@ body {
 }
 
 .about-copy {
-    max-width: 460px;
+    max-width: 375px;
     min-width: 375px;
 }
 
 .sup-container {
-    &#sup-1-content,
-    &#sup-2-content {
-        margin-right: 30px;
-        opacity: 0;       
-    }
-
-    &#sup-2-content  {
-        margin-top: 26px;
-    }
+    opacity: 0;
+    margin-right: 20px; 
+    position: absolute;
 
     .superscript {
         padding-top: 10px;
+        font-family: $family-sans-serif;
+        color: $smoke;
+        font-size: 15px;
+        line-height: 24px;
+        text-indent: -10px;
+        max-width: 250px;
     }
 
-    .superscript::before {
+    &::before {
         content: "";
         display: block;
-        margin-top: -15px;
-        padding-top: 5px;
+        margin-top: -8px;
         width: 30px;
         border-top: 2px solid $light-smoke;
+    }
+
+    &#sup-2-content {
+        top: 165px;
+    }
+
+    &#sup-3-content {
+        top: 195px;
+    }
+
+    &#sup-4-content {
+       top: 255px;
     }
 }
 
@@ -151,11 +162,15 @@ body {
     }
 
     .about-copy {
-        min-width: none;
+        min-width: 100%;
         max-width: 100%;
     }
 
     .d-none-mobile {
+        display: none;
+    }
+
+    sup {
         display: none;
     }
  }
@@ -165,7 +180,7 @@ body {
 
     .intro-title {
         text-align: right;
-        padding: 0 $mobile-margin;
+        padding-right: $mobile-margin;
         font-size: 7vw;
     }
 

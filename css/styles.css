@@ -23,17 +23,9 @@ h5 {
 .subtitle {
   font-family: "Aktiv Grotesk", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   color: #7F8A8D;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 400;
   margin-bottom: 15px; }
-
-.superscript {
-  font-family: "Aktiv Grotesk", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  color: #7F8A8D;
-  font-size: 1rem;
-  line-height: 27px;
-  text-indent: -10px;
-  max-width: 250px; }
 
 a {
   color: #2a434a;
@@ -309,23 +301,33 @@ body {
   margin-top: 9rem; }
 
 .about-copy {
-  max-width: 460px;
+  max-width: 375px;
   min-width: 375px; }
 
-.sup-container#sup-1-content, .sup-container#sup-2-content {
-  margin-right: 30px;
-  opacity: 0; }
-.sup-container#sup-2-content {
-  margin-top: 26px; }
-.sup-container .superscript {
-  padding-top: 10px; }
-.sup-container .superscript::before {
-  content: "";
-  display: block;
-  margin-top: -15px;
-  padding-top: 5px;
-  width: 30px;
-  border-top: 2px solid #afbcbf; }
+.sup-container {
+  opacity: 0;
+  margin-right: 20px;
+  position: absolute; }
+  .sup-container .superscript {
+    padding-top: 10px;
+    font-family: "Aktiv Grotesk", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: #7F8A8D;
+    font-size: 15px;
+    line-height: 24px;
+    text-indent: -10px;
+    max-width: 250px; }
+  .sup-container::before {
+    content: "";
+    display: block;
+    margin-top: -8px;
+    width: 30px;
+    border-top: 2px solid #afbcbf; }
+  .sup-container#sup-2-content {
+    top: 165px; }
+  .sup-container#sup-3-content {
+    top: 195px; }
+  .sup-container#sup-4-content {
+    top: 255px; }
 
 .sec-section {
   margin: 6rem 0; }
@@ -345,15 +347,18 @@ body {
     font-size: 2.25rem; }
 
   .about-copy {
-    min-width: none;
+    min-width: 100%;
     max-width: 100%; }
 
   .d-none-mobile {
+    display: none; }
+
+  sup {
     display: none; } }
 @media (max-width: 576px) {
   .intro-title {
     text-align: right;
-    padding: 0 20px;
+    padding-right: 20px;
     font-size: 7vw; }
 
   .about-copy,

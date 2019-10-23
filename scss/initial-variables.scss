@@ -75,18 +75,9 @@ h5 {
 .subtitle {
   font-family: $family-sans-serif;
   color: $smoke;
-  font-size: $size-6;
+  font-size: 16px;
   font-weight: 400;
   margin-bottom: 15px;
-}
-
-.superscript {
-  font-family: $family-sans-serif;
-  color: $smoke;
-  font-size: 1rem;
-  line-height: 27px;
-  text-indent: -10px;
-  max-width: 250px;
 }
 
 a {
