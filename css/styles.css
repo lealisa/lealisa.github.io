@@ -236,6 +236,14 @@ body {
   margin: 0 auto;
   cursor: default; }
 
+.top-nav, .intro, .about, .contact {
+  opacity: 0; }
+
+.load {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0, 0, 0); }
+
 .row {
   margin: 0; }
 
@@ -287,7 +295,13 @@ body {
   max-width: 1680px; }
 
 .intro {
-  margin-top: 12rem; }
+  margin-top: 12rem;
+  transform: translate3d(0, 20px, 0); }
+
+.intro.load {
+  opacity: 1;
+  transition: all 0.75s ease-in-out;
+  transform: translate3d(0, 0, 0); }
 
 .intro-title {
   font-size: 3.6vw;
@@ -298,10 +312,11 @@ body {
   font-weight: 400; }
 
 .about {
-  margin-top: 9rem; }
+  margin-top: 9rem;
+  transform: translate3d(0, 20px, 0); }
 
 .about-copy {
-  max-width: 375px;
+  max-width: 410px;
   min-width: 375px; }
 
 .sup-container {

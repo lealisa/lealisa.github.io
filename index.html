@@ -63,7 +63,7 @@
     <section class="intro"> 
         <div class="row  no-gutters">
             <div class="col-xs-12 col-sm-10 offset-sm-0 col-md-8 col-lg-8 col-xl-8">
-              <h1 class="intro-title">Alisa is a <i>multidisciplinary</i><br> designer with a focus on digital <br>products based in New York</h1></div>
+              <h1 class="intro-title">Alisa is a <i>Brooklyn</i> based <br>multidisciplinary designer with <br>a focus on <i>digital products</i></h1></div>
             </div>
     </section>
 
@@ -92,12 +92,12 @@
               </div>
             </div>
 
-            <div class="col-sm-7 offset-sm-2 col-md-3 offset-md-0 offset-lg-0">
+            <div class="col-sm-7 offset-sm-2 col-md-4 offset-md-0 offset-lg-0">
                 <p class="about-copy">
                     I am currently working at <a id="sup-1" class="sup" href="https://www.palantir.com/palantir-foundry/impact/" target="_blank">Palantir Technologies<sup>1</sup></a>, designing software and tools that empower some of the world’s crucial organizations to ask and answer their most complex questions.
                 </p>
                 <p class="about-copy">               
-                    Prior to Palantir, I was designing voice-driven apps for the visually impaired with <a id="sup-2" class="sup" href="https://www.fastcompany.com/3058436/conversant-labs-quest-to-make-smartphone-apps-usable-for-the-visually-impaire" target="_blank">Conversant Labs<sup>2</sup></a>, and building a digital museum for the <a id="sup-3" class="sup"  href="" target="_blank">MoonArk<sup>3</sup></a>. I earned my degree in Communication Design from <a id="sup-4" class="sup" href="https://www.design.cmu.edu/" target="_blank">Carnegie Mellon University<sup>4</sup></a>, where I discovered my love for creating interactive experiences, as well as front-end development, print, motion and furniture design.
+                    Prior to Palantir, I was designing voice-driven apps for the visually impaired with <a id="sup-2" class="sup" href="https://www.fastcompany.com/3058436/conversant-labs-quest-to-make-smartphone-apps-usable-for-the-visually-impaire" target="_blank">Conversant Labs<sup>2</sup></a>, and building a digital museum for the <a id="sup-3" class="sup"  href="https://www.npr.org/2016/01/03/461795258/arts-capsule-to-hitch-a-ride-to-the-moon-on-carnegie-mellon-s-rover" target="_blank">MoonArk<sup>3</sup></a>. I earned my degree in Communication Design from <a id="sup-4" class="sup" href="https://www.design.cmu.edu/" target="_blank">Carnegie Mellon University<sup>4</sup></a>, where I discovered my love for creating interactive experiences, as well as front-end development, print, and motion.
                 </p>
                 <p class="about-copy">               
                     Born in Moscow to Russian-Vietnamese parents, and spending most of my formative years in the U.S., I’ve always been interested in how people bridge gaps between different languages, cultures and backgrounds. In college, I became fascinated with how design can not only drive positive change, but can also bring people of diverse identities and experiences together. 
@@ -147,9 +147,17 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script>
         $('.sup').hover(
-          function(){ $("#" + this.id + "-content").animate({opacity: 1}, 200); },
-          function(){ $("#" + this.id + "-content").animate({opacity: 0}, 200); }     
+          function(){ $("#" + this.id + "-content").animate({opacity: 1}, 300); },
+          function(){ $("#" + this.id + "-content").animate({opacity: 0}, 300); }     
         );
+
+        $(document).ready(function () {
+          $(".intro").delay(100).addClass("load");
+          $(".top-nav, .about, .contact").delay(750).queue(function(next){
+            $(this).addClass("load").dequeue();
+          });
+        });
+              
 
     </script>
   </body>

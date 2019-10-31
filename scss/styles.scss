@@ -10,6 +10,17 @@ body {
     cursor: default;
 }
 
+.top-nav, .intro, .about, .contact {
+    opacity: 0;
+}
+
+
+.load {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0, 0, 0);
+}
+
 .row {
     margin: 0;
 }
@@ -77,7 +88,15 @@ body {
 
 .intro {
     margin-top: $xl-spacing;
+    transform: translate3d(0, 20px, 0);
 }
+
+.intro.load {
+    opacity: 1;
+    transition: all 0.75s ease-in-out;
+    transform: translate3d(0, 0, 0);
+}
+
 
 .intro-title {
     font-size: 3.6vw;
@@ -90,10 +109,12 @@ body {
 
 .about {
     margin-top: $lg-spacing;
+    transform: translate3d(0, 20px, 0);
 }
 
+
 .about-copy {
-    max-width: 375px;
+    max-width: 410px;
     min-width: 375px;
 }
 
