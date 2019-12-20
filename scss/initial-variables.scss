@@ -163,10 +163,10 @@ ul li::before {
 
 p a {
   font-style: italic;
-  border-bottom: 1px solid $light-smoke;
+  border-bottom: 1px solid $highlight;
   
   &:hover {
-    border-bottom: 1px solid $highlight;
+    border-bottom: 1px solid $light-smoke;
   }
 }
 

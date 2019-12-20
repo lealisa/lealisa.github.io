@@ -103,10 +103,10 @@ ul li::before {
 
 p a {
   font-style: italic;
-  border-bottom: 1px solid #afbcbf;
+  border-bottom: 1px solid #ad662b;
 }
 p a:hover {
-  border-bottom: 1px solid #ad662b;
+  border-bottom: 1px solid #afbcbf;
 }
 
 p.emphasis {
