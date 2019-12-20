@@ -9,17 +9,19 @@ $grey-dark:    hsl(0, 0%, 29%) !default;
 $grey:         hsl(0, 0%, 48%) !default;
 $grey-light:   hsl(0, 0%, 71%) !default;
 $grey-lighter: hsl(0, 0%, 86%) !default;
-$grey-lightest: hsl(0, 0%, 93%) !default;
+$grey-lightest: hsl(0, 0%, 94%) !default;
 
 $white-ter:    hsl(0, 0%, 96%) !default;
 $white-bis:    hsl(0, 0%, 98%) !default;
 $white:        hsl(0, 0%, 100%) !default;
 
 $ocean: #2a434a;
+$wind: #54666B;
 $smoke: #7F8A8D;
 $light-smoke: #afbcbf;
 $air: #ccdbdd;
 $cream: #f9f7f3;
+$haze: #f8f8f8;
 $highlight: #ad662b;
 
 ::selection {
@@ -28,7 +30,7 @@ $highlight: #ad662b;
 
 // Typography
 
-$family-sans-serif: "Aktiv Grotesk", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$family-sans-serif: 'Source Sans Pro', sans-serif;
 $family-serif: freight-text-pro, serif;
 $family-monospace: monospace !default;
 $render-mode: optimizeLegibility !default;
@@ -68,6 +70,13 @@ body {
   color: $highlight;
 }
 
+h1, h2, h3, h4, h5 h6 {
+  color: $ocean;
+  font-weight: $weight-normal;
+  margin-bottom: $size-5;
+  line-height: 150%;
+}
+
 h5 {
   font-size: $size-6;
 }
@@ -75,9 +84,9 @@ h5 {
 .subtitle {
   font-family: $family-sans-serif;
   color: $smoke;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 a {
@@ -115,12 +124,49 @@ a {
   // }
 }
 
+ol {
+  list-style: none;
+  counter-reset: custom-counter;
+  padding-left: 0;
+}
+
+ol li {
+  counter-increment: custom-counter;
+  margin-bottom: 1rem;
+
+}
+ol li::before {
+  content: "0"counter(custom-counter);
+  color: $smoke;
+  font-weight: $weight-semibold;
+  margin-right: 1rem;
+}
+
+ul {
+  padding-left: 1.25rem;
+  margin-right: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 1rem;
+}
+
+ul li::before {
+  content: "–";
+  margin-left: -1rem;
+  margin-right: 0.5rem;
+  color: $smoke;
+  font-weight: $weight-bold;
+}
+
 p a {
   font-style: italic;
-  border-bottom: 1px solid $highlight;
+  border-bottom: 1px solid $light-smoke;
   
   &:hover {
-    border-bottom: 1px solid $light-smoke;
+    border-bottom: 1px solid $highlight;
   }
 }
 
@@ -132,15 +178,15 @@ p.emphasis {
 
 // Spacing
 
-$block-spacing: 6rem !default;
+$block-spacing: 5rem !default;
 $lg-spacing: 9rem !default;
 $xl-spacing: 12rem !default;
 
 $mobile-margin: 20px;
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .left-col {
-    padding: 0 $mobile-margin;
+    padding: 0 $mobile-margin !important;
   }
 }
 
