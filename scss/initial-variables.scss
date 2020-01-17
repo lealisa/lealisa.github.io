@@ -62,8 +62,37 @@ body {
   color: $ocean;
   font-family: $family-serif;
   font-weight: $weight-normal;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: $size-5;
+  line-height: 170%;
+  overflow-x: hidden;
+}
+
+#grid-lines {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: hidden;
+  z-index: 5;
+  pointer-events: none;
+  max-width: $max-width-content;
+  margin: 0 auto;
+
+  .row {
+      height: 100%;
+      margin: 0;
+
+      >* {
+          height: 100%;
+          border-left: 1px solid $smoke;
+          opacity: 0.05;
+      }
+
+      >*:last-of-type {
+          border-right: 1px solid $smoke;
+      }
+  }
 }
 
 .highlight {
@@ -83,10 +112,21 @@ h5 {
 
 .subtitle {
   font-family: $family-sans-serif;
+  line-height: 180%;
   color: $smoke;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 400;
   margin-bottom: 1rem;
+
+    &.right {
+      text-align: right;
+      max-width: 345px;
+      margin-left: auto;
+    }
+
+    &.center {
+      text-align: center;
+    }
 }
 
 a {
@@ -109,10 +149,10 @@ a {
 
   &.external {
     font-style: italic;
-    border-bottom: 1px solid $highlight;
+    border-bottom: 1px solid $light-smoke;
     
     &:hover {
-      border-bottom: 1px solid $light-smoke;
+      border-bottom: 1px solid $highlight;
     }
   }
 
@@ -163,10 +203,11 @@ ul li::before {
 
 p a {
   font-style: italic;
-  border-bottom: 1px solid $highlight;
+  // text-decoration: underline;
+  border-bottom: 1px solid $light-smoke;
   
   &:hover {
-    border-bottom: 1px solid $light-smoke;
+    border-bottom: 1px solid $highlight;
   }
 }
 
@@ -182,13 +223,8 @@ $block-spacing: 5rem !default;
 $lg-spacing: 9rem !default;
 $xl-spacing: 12rem !default;
 
-$mobile-margin: 20px;
-
-@media (max-width: 991px) {
-  .left-col {
-    padding: 0 $mobile-margin !important;
-  }
-}
+$tablet-margin: 0;
+$mobile-margin: 0;
 
 // Miscellaneous
 
