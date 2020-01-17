@@ -26,33 +26,13 @@ section {
 
 .row {
     margin: 0;
-}
 
-#grid-lines {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    overflow-y: hidden;
-    z-index: -5;
-    pointer-events: none;
-    max-width: $max-width-content;
-    margin: 0 auto;
+    &.title {
+        margin-bottom: 3rem;
+    }
 
-    .row {
-        height: 100%;
-        margin: 0;
-
-        >* {
-            height: 100%;
-            border-left: 1px solid $smoke;
-            opacity: 0.05;
-        }
-
-        >*:first-of-type {
-            border-left: none;
-        }
+    &.padding {
+        margin-top: 10vw;
     }
 }
 
@@ -73,8 +53,11 @@ section {
 
 
 .copy {
-    min-width: 375px;
     max-width: 650px;
+}
+
+#home .copy {
+    min-width: 375px;
 }
 
 // Home Styles
@@ -102,11 +85,12 @@ section {
 }
 
 
-.about {
+.about,
+.contact {
     margin-top: 6rem;
 
     .copy {
-        max-width: 410px;
+        max-width: 450px;
         min-width: 375px;
     }
 }
@@ -114,7 +98,7 @@ section {
 
 .sup-container {
     opacity: 0;
-    margin-right: 20px; 
+    margin-right: 1rem; 
     position: absolute;
 
     .superscript {
@@ -124,7 +108,7 @@ section {
         font-size: 15px;
         line-height: 24px;
         text-indent: -10px;
-        max-width: 250px;
+        max-width: 355px;
     }
 
     &::before {
@@ -160,7 +144,8 @@ section {
 
 .bluf,
 .description,
-.hmw {
+.hmw,
+.gameplay {
     padding-top: 8vw;
     padding-bottom: 10vw;
 }
@@ -168,7 +153,7 @@ section {
 section.full-width-bg {
     position: relative;
     max-width: 100%;
-    z-index: -10;
+    // z-index: -10;
     background: $grey-lightest;
 
     &.gain {
@@ -216,7 +201,7 @@ section.full-width-bg {
 
 
 .img-intro {
-    z-index: -1;
+    z-index: 10;
 
     &.board {
         position: absolute;
@@ -253,34 +238,45 @@ section.full-width-bg {
 }
 
 .image-row {
-    margin: 4rem 0 1rem;
+    margin: 4rem 0 5rem;
+
+    .subtitle {
+        padding-top: 1rem;
+    }
 }
 
 .img-wrapper {
-    img {
-        margin-left: 1px;
-        width: calc(100% - 1px);
-    }
+    padding: 1rem;
+    z-index: 10;
 
-    .subtitle {
-        margin: 0.5rem 0 2rem;
-        font-size: 14px;
-        line-height: 150%;
+    img {
+        width: 100%;
+        align-self: center;
     }
 }
 
+.hmw {
+    .img-wrapper img {
+        max-width: 400px;
+        margin: auto;
+    }
+}
 
-section.full-width-bg.hmw {
+section.full-width-bg.hmw,
+section.full-width-bg.gameplay {
     background: #2f4466;
     color: white;
 
-    h3 {
+    h3, h4, .subtitle {
         color: white;
     }
 
     .subtitle {
-        color: white;
-        opacity: 0.5;
+        opacity: 0.6;
+    }
+
+    .img-wrapper {
+        padding: 1rem;
     }
 
     ul {
@@ -294,13 +290,23 @@ section.full-width-bg.hmw {
     }
 }
 
+.gameplay {
+    .dream-card {
+        margin-top: 35%;
+    }
+
+    .highlight-copy {
+        padding-right: 3rem;
+    }
+}
+
 section.final-img {
     background-image: url("../img/final_gain.jpg");
     background-size: cover;
     height: 50vw;
     max-height: 850px;
     min-height: 300px;
-    z-index: 5;
+    z-index: 10;
 }
 
 @media screen and (min-width: 1680px) {
@@ -309,10 +315,13 @@ section.final-img {
     }
 
     .bluf,
-    .description {
+    .description,
+    .hmw,
+    .gameplay {
         padding-top: 135px;
         padding-bottom: 168px;
     }
+    
 }
 
 @media (max-width: 991px) {
@@ -325,7 +334,11 @@ section.final-img {
     }
 
     .image-row {
-        padding: 0 $mobile-margin;
+    }
+
+    .subtitle.right {
+        max-width: 100%;
+        text-align: left;
     }
  }
  
@@ -339,12 +352,25 @@ section.final-img {
     }
 
     .copy,
-    .hmw {
+    .hmw,
+    .gameplay {
         min-width: 100%;
         max-width: 100%;
-        padding: 0 $mobile-margin;
     }
 
+    .gameplay {
+        .dream-card {
+            margin: 1rem 0 0;
+        }
+    
+        .highlight-copy {
+            padding-right: 0;
+        }
+    }
+    
+    .image-row {
+        margin: 1rem 0 3rem;
+    }
 
     .d-none-mobile {
         display: none;
@@ -354,28 +380,51 @@ section.final-img {
         display: none;
     }
 
+    .bluf,
+    .description,
+    .hmw,
+    .gameplay {
+        padding-top: 2.5rem;
+        padding-bottom: 3rem;
+    }
+
     .bluf-wrapper {
-        margin-bottom: 3rem;
+        margin-bottom: 0;
+
+        .order-sm-last.order-xs-last {
+            margin-top: 3rem;
+        }
     }
  }
+
+ footer {
+    padding: 3rem 0;
+    position: relative;
+    max-width: 100%;
+    background: white;
+}
+
 
 
 @media (max-width: 576px) {
 
     .intro-title {
-        padding-right: $mobile-margin;
+        padding-right: 1rem;
         font-size: 7vw;
     }
 
     .project-title {
-        padding-right: $mobile-margin;
+        padding-right: 1rem;
         font-size: 6.5vw;
     }
 
     .copy,
     .about .copy,
     .social-links-list {
-        padding: 0 $mobile-margin;
         max-width: 100%;
+    }
+
+    .image-row {
+        margin: 1rem 0;
     }
 }
