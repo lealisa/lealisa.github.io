@@ -568,12 +568,23 @@ footer {
         .project {
             margin-top: 0.5rem;
             margin-bottom: 2rem;
+
+            &:hover .project-list-title::before {
+                    width: 90%;
+                }
         }
 
         .project-list-title,
         .subtitle {
             text-align: left;
             display: inline-block;
+        }
+
+        .project-list-title {
+            &::before {
+                left: 0;
+                height: 100px;
+            }
         }
 
         .subtitle::before {

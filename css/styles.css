@@ -748,10 +748,15 @@ footer {
   #home .project-list .project {
     margin-top: 0.5rem;
     margin-bottom: 2rem; }
+    #home .project-list .project:hover .project-list-title::before {
+      width: 90%; }
   #home .project-list .project-list-title,
   #home .project-list .subtitle {
     text-align: left;
     display: inline-block; }
+  #home .project-list .project-list-title::before {
+    left: 0;
+    height: 100px; }
   #home .project-list .subtitle::before {
     content: "— ";
     display: inline-block;
