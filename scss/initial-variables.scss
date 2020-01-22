@@ -15,14 +15,15 @@ $white-ter:    hsl(0, 0%, 96%) !default;
 $white-bis:    hsl(0, 0%, 98%) !default;
 $white:        hsl(0, 0%, 100%) !default;
 
+$charcoal: #2E353B;
 $ocean: #2a434a;
 $wind: #54666B;
 $smoke: #7F8A8D;
 $light-smoke: #afbcbf;
 $air: #ccdbdd;
-$cream: #f9f7f3;
+$cream: #F6F5F3;
 $haze: #f8f8f8;
-$highlight: #ad662b;
+$highlight: #C36E38;
 
 ::selection {
   background-color: $air;
@@ -30,7 +31,9 @@ $highlight: #ad662b;
 
 // Typography
 
-$family-sans-serif: 'Source Sans Pro', sans-serif;
+$family-sans-serif: aktiv-grotesk, sans-serif;
+$family-sans-serif-ex: aktiv-grotesk-extended, sans-serif;
+$font-style: normal;
 $family-serif: freight-text-pro, serif;
 $family-monospace: monospace !default;
 $render-mode: optimizeLegibility !default;
@@ -39,7 +42,7 @@ $size-1: 3rem !default;
 $size-2: 2.25rem !default;
 $size-3: 1.85rem !default;
 $size-4: 1.5rem !default;
-$size-5: 1.2rem !default;
+$size-5: 1.25rem !default;
 $size-6: 1rem !default;
 $size-7: 0.75rem !default;
 
@@ -60,11 +63,19 @@ html {
 
 body {
   color: $ocean;
+  background-color: $haze;
   font-family: $family-serif;
   font-weight: $weight-normal;
   font-size: $size-5;
-  line-height: 170%;
   overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  cursor: default;
+}
+
+p {
+  margin-bottom: 1.5rem;
 }
 
 #grid-lines {
@@ -99,22 +110,71 @@ body {
   color: $highlight;
 }
 
-h1, h2, h3, h4, h5 h6 {
+h1, h2, h3, h4, h5, h6 {
   color: $ocean;
   font-weight: $weight-normal;
   margin-bottom: $size-5;
   line-height: 150%;
+
+  .italic {
+    font-style: italic;
+    display: contents;
+  }
 }
 
-h5 {
-  font-size: $size-6;
+.top-nav a {
+  font-family: $family-sans-serif-ex;
+  font-size: 15px;
+  font-weight: 400;
+  z-index: 20;
 }
+
+a.website-title {
+  font-family: $family-sans-serif-ex;
+  font-weight: 600;
+  color: $smoke;
+}
+
+#home {
+  .website-title {
+    color: $highlight;
+
+    -webkit-transition: all .3s ease; 
+    -moz-transition:   all .3s ease;; 
+    -ms-transition:  all .3s ease;; 
+    transition:  all .3s ease; 
+
+    &:hover {
+      color: $smoke;
+
+      -webkit-transition: all .3s ease; 
+      -moz-transition:   all .3s ease;; 
+      -ms-transition:  all .3s ease;; 
+      transition:  all .3s ease; 
+    }
+  }
+}
+
+
+.section-title {
+  font-family: $family-sans-serif-ex;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 150%;
+  color: $ocean;
+  margin-bottom: 1rem;
+}
+
+.details .section-title {
+  margin-bottom: 0;
+}
+
 
 .subtitle {
   font-family: $family-sans-serif;
   line-height: 180%;
   color: $smoke;
-  font-size: 1rem;
+  font-size: 15px;
   font-weight: 400;
   margin-bottom: 1rem;
 
@@ -129,40 +189,104 @@ h5 {
     }
 }
 
+
+
 a {
   color: $ocean;
+  font-family: $family-sans-serif;
 
-  -webkit-transition: color .3s ease; 
-  -moz-transition:   color .3s ease;; 
-  -ms-transition:  color .3s ease;; 
-  transition:  color .3s ease; 
+  -webkit-transition: all .3s ease; 
+  -moz-transition:   all .3s ease;; 
+  -ms-transition:  all .3s ease;; 
+  transition:  all .3s ease; 
 
   &:hover {
-    text-decoration: none;
     color: $ocean;
-    
-    -webkit-transition: color .3s ease; 
-    -moz-transition:   color .3s ease;; 
-    -ms-transition:  color .3s ease;; 
-    transition:  color .3s ease; 
+    text-decoration: none;
+
+    -webkit-transition: all .3s ease; 
+    -moz-transition:   all .3s ease;; 
+    -ms-transition:  all .3s ease;; 
+    transition:  all .3s ease; 
   }
 
   &.external {
-    font-style: italic;
-    border-bottom: 1px solid $light-smoke;
+    &::after {
+      content: " ↗";
+      opacity: 0;
+      color: $highlight;
+      font-weight: $weight-semibold;
+      
+      -webkit-transition: all .3s ease; 
+      -moz-transition:   all .3s ease;; 
+      -ms-transition:  all .3s ease;; 
+      transition:  all .3s ease; 
+    }
     
     &:hover {
-      border-bottom: 1px solid $highlight;
+      color: $highlight;
+
+      &::after {
+        opacity: 1;
+        
+        -webkit-transition: all .3s ease; 
+        -moz-transition:   all .3s ease;; 
+        -ms-transition:  all .3s ease;; 
+        transition:  all .3s ease; 
+        
+      }
     }
   }
 
-  // &.external::after {
-  //   content: " ↗";
-  //   color: $highlight;
-  //   font-weight: $weight-semibold;
-  //   font-family: $family-sans-serif;
-  // }
 }
+
+.dark-theme {
+  color: white;
+
+  h3, h4, .subtitle {
+      color: white;
+  }
+
+  .section-title {
+    color: $light-smoke;
+  }
+
+  a {
+    color: $white;
+  
+    &:hover {
+      color: $highlight;
+    }
+  }
+}
+
+
+ul li a,
+ol li a {
+  font-size: 1.1rem;
+
+  &:hover {
+    color: $highlight;
+    border-bottom: transparent;
+  }
+}
+
+p a {
+  border-bottom: 1px solid $smoke;
+  font-size: 17px;
+  
+  &:hover {
+    color: $highlight;
+    border-bottom: 1px solid #79513A;
+  }
+}
+
+p.emphasis {
+  font-style: italic;
+  color: $highlight;
+}
+
+
 
 ol {
   list-style: none;
@@ -173,12 +297,14 @@ ol {
 ol li {
   counter-increment: custom-counter;
   margin-bottom: 1rem;
-
 }
+
 ol li::before {
   content: "0"counter(custom-counter);
-  color: $smoke;
+  // color: $smoke;
+  font-family: $family-sans-serif-ex;
   font-weight: $weight-semibold;
+  font-size: 15px;
   margin-right: 1rem;
 }
 
@@ -201,20 +327,6 @@ ul li::before {
   font-weight: $weight-bold;
 }
 
-p a {
-  font-style: italic;
-  // text-decoration: underline;
-  border-bottom: 1px solid $light-smoke;
-  
-  &:hover {
-    border-bottom: 1px solid $highlight;
-  }
-}
-
-p.emphasis {
-  font-style: italic;
-  color: $highlight;
-}
 
 
 // Spacing

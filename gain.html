@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/cms2vuj.css">
+    <link rel="stylesheet" href="https://use.typekit.net/unw3moq.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74096139-2"></script>
+    <script src="js/smooth-scroll.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -19,13 +21,20 @@
     <title>Alisa Le</title>
   </head>
   <body>
+
     <section class="top-nav">
-      <div class="nav row  ">
-          <div class="col-xs-4 col-sm-2 col-md-2 offset-lg-1">
-            <a class="highlight left-col no-wrap" href="#">Alisa Le</a>
+        <div class="nav row">
+            <div class="col-xs-4 col-sm-2 col-md-2 offset-lg-1">
+              <a class="left-col website-title no-wrap" href="index.html">AL</a>
+            </div>
+            <div class="col-xs-4 col-sm-2 offset-sm-6 col-md-2 offset-md-6 col-lg-1">
+              <a class="external" href="Alisa_resume_1019.pdf" target="_blank">CV</a>
+            </div>
+            <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
+              <a class="external" href="mailto:lealisamail@gmail.com">Contact</a>
+            </div>
           </div>
-        </div>
-    </section>
+      </section>
 
     <section class="full-width-bg gain">
         <section class="project-intro"> 
@@ -46,18 +55,24 @@
 
     <section class="full-width-bg bluf">
         <section class="bluf-wrapper">
-            <div class="row ">
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 offset-lg-1 left-col order-sm-last order-xs-last">
-                <div class="subtitle">Team</div>
-                <p>Leah Anton & Sharon Yu</p>
-                <div class="subtitle">Role</div>
-                <p>Concept design, Research,<br>UX/UI, Visual design</p>
-                <p>January–April 2017</p>
-                </div>
+            <ul class="row ">
+                <ul class="details col-xs-12 col-sm-12 col-md-4 col-lg-3 offset-lg-1 left-col simple order-sm-last order-xs-last">
+                    <li>
+                        <div class="section-title">Team</div>
+                        <p class="">Leah Anton & Sharon Yu</p>
+                    </li>
+                    <li>
+                        <div class="section-title">Role</div>
+                        <p>Concept design, Research,<br>UX/UI, Visual design</p>
+                    </li>
+                    <li>
+                        <p>January–April 2017</p>
+                    </li>
+                </ul>
 
                 <div class="col-sm-12 offset-sm-0 col-md-7 col-lg-6 offset-lg-1 col-xl-6 order-md-last">
                     <h4 class="bluf-copy copy">
-                        <i>Gain</i> is a board game with an accompanying mobile app designed to playfully simulate the experience of investing money. Through playing the game, people can learn about the benefits of long-term financial management. The goal of the game is to help PNC’s clients feel more confident sharing their financial goals with the institution in order to enhance investment opportunities.
+                        <i>Gain</i> is a board game with an accompanying mobile app designed to playfully simulate the experience of investing money. Through playing the game, people can learn about the benefits of long-term financial management. The goal of <i>Gain</i> is to help PNC’s clients feel more confident sharing their financial goals with the institution in order to enhance investment opportunities.
                     </h4>
                     <p class="copy">               
                         <i>This project was sponsored by PNC in partnership with the Carnegie Mellon School of Design as part of the Learning Experience Design course.</i>
@@ -66,8 +81,26 @@
             </div>
         </section>
     </section>
+
+    <section class="index full-width-bg">
+        <section class="index-wrapper">
+            <div class="row  ">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 offset-lg-1 left-col">
+                    <h4>Index</h4>
+                </div>
+                <div class="col-sm-12 offset-sm-0 col-md-7 col-lg-5 offset-lg-1 col-xl-5">
+                    <ol class="copy">
+                        <li><a data-scroll href="#gain-research">Reserch & process</a></li>
+                        <li><a data-scroll href="#gain-gameplay">Final game</a></li>
+                        <li><a data-scroll href="#gain-mobile-app">Mobile app</a></li>
+                    </ol>  
+                </div>
+            </div>
+        </section>
+    </section>
+
   
-    <section class="description">
+    <section id="gain-research" class="description">
             <div class="row  ">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 offset-lg-1 left-col">
                   <h3>Research & process</h3>
@@ -100,9 +133,8 @@
                 </div>
             </div>
 
-            <div class="row  ">
+            <div class="row ">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 offset-lg-1 left-col"></div>
-
                 <div class="col-sm-12 offset-sm-0 col-md-7 col-lg-5 offset-lg-1 col-xl-5">
                     <p class="copy">
                         Through contextual research and dissecting the information we received, we quickly found that there are several learning gaps between the customers and our client. We reframed our observations into “how might we” statements to allow ourselves turn these problems into design opportunities.   
@@ -111,21 +143,22 @@
             </div> 
         </section>
 
-        <section class="full-width-bg hmw">
+        <section class="full-width-bg hmw dark-theme">
                 <section class="wrapper">
                    <div class="row  ">
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 offset-lg-1 d-flex img-wrapper">
-                                <img src="img/hmw_gain_illo.png">
+                                <img src="img/hmw_gain_illo.svg">
                             </div>
                         <div class="col-sm-12 offset-sm-0 col-md-7 col-lg-6 offset-lg-1">
-                            <div class="subtitle">Challenges</div>   
-                            <ul class="row  ">
+                            <div class="section-title">Challenges</div>   
+                            <ul class="row no-gutters">
                                 <li class="col-xs-12 col-md-6">Customers feel like they don’t receive tailored experiences from the bank, giving them little reason to trust it with investment options.</li> 
-                                <li class="col-xs-12 col-md-6">There is a lack of understanding of the services that the bank has to offer and the positive impact it could have on financial wellbeing.</li>
+                                <li class="col-xs-12 col-md-6">There is a lack of understanding of the services that the bank has to offer and the positive impact it could have on a customer's financial wellbeing.</li>
                                 <li class="col-xs-12 col-md-6">Customers vary greatly in age, investing experience, and financial literacy.</li>
                             </ul>
-                            <div class="subtitle">Goal</div>
-                            <h3>How might we <i>empower</i> customers to <i>confidently invest</i> money with PNC bank according to their financial goals, circumstances and needs?</h3>
+                            <div class="section-title">Goal</div>
+                            <h3>
+                                How might we <i>empower</i> customers to <i>confidently invest</i> money with PNC bank according to their financial goals, circumstances, and needs?</h3>
                         </div>
                     </div>
                 </section>
@@ -137,22 +170,29 @@
     
                     <div class="col-sm-12 offset-sm-0 col-md-7 col-lg-5 offset-lg-1 col-xl-5">
                         <p class="copy">
-                            With this goal in mind, we decided to focus on educating customers about their investment options and long-term monetary planning to stress pursuit of their financial wellbeing. Our hypothesis was that with more financial literacy, customers will be at ease to have meaningful exchanges with the institution. 
+                            With this goal in mind, we decided to focus on educating customers about their unique investment options and personalized long-term planning. Our hypothesis was that with more financial literacy, customers will be at ease to have meaningful exchanges with the institution. 
                         </p>
                         <p class="copy">
                                 Through researching experiential learning methods, gamification theories, and the psychology behind money management and investing, we found that the best way for people to engage with such serious material would be to simulate it in a low-stakes, low-pressure environment. A large number of surveyed customers expressed preference for in-person consultations and interactions, so we wanted to make sure that the experience had both physical and digital components.   
                         </p>
                     </div>    
                 </div> 
+
                 <div class="row image-row">
-                        <div class="col-md-12 offset-lg-1 col-lg-5 img-wrapper">
-                            <img src="img/process_game.jpg">
+                    <div class="col-md-12 offset-lg-1 col-lg-5 img-wrapper">
+                        <img src="img/process_game.jpg">
+                        <p class="subtitle">Brainstorming game play and physical board format</p>
+                    </div>
+                    <div class="col-sm-12 col-lg-5 img-wrapper">
+                        <div class="row ">
+                            <img src="img/gain_storyboard.png">
+                            <p class="subtitle">Creating storyboards to explore and better understand the journeys for various distinct concepts</p>
+                        </div>
+                        <div class="row sm-padding">
+                            <img src="img/board_wireframe.png">
                             <p class="subtitle">Brainstorming game play and physical board format</p>
                         </div>
-                        <div class="col-sm-12 col-lg-5 img-wrapper">
-                                <img src="img/board_wireframe.png">
-                                <p class="subtitle">Brainstorming game play and physical board format</p>
-                        </div>
+                    </div>
                 </div>
 
                 <div class="row">
@@ -160,7 +200,7 @@
         
                         <div class="col-sm-12 offset-sm-0 col-md-7 col-lg-5 offset-lg-1 col-xl-5">
                             <p class="copy">
-                                After exploring a range of ideas through creating storyboards, user journeys and conducting workshops with client’s design team and financial advisors, we set off to create an educational board game. Our team felt that a board game would be a wholesome, age-neutral medium that would allow customers to experience investing in a fun and engaging way. 
+                                After exploring a range of ideas through creating storyboards, user journeys, and conducting workshops with client’s design team and financial advisors, we set off to create an educational board game. Our team felt that a board game would be a wholesome, age-neutral medium that would allow customers to experience investing in a fun and engaging way. 
                             </p>
                         </div>    
                     </div> 
@@ -169,32 +209,26 @@
 
             <section class="full-width-bg final-img"></section>
 
-            <section class="description">
+            <section id="gain-gameplay" class="description">
                 <div class="row  ">
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 offset-lg-1 left-col">
-                        <h3>Final design</h3>
+                        <h3>Final game</h3>
                     </div>
         
                     <div class="col-sm-12 offset-sm-0 col-md-7 col-lg-5 offset-lg-1 col-xl-5">
                         <p class="copy">
-                            For the final product we landed on a playful tone of voice for the design, which provided a welcome contrast to the otherwise serious topic. This aesthetic is constant across the both mobile app, which  introduces users to the rules of the game and provides subsequent investing tips, and the board game itself. This visual unity ties the two distinct aspects of Gain together in a cohesive and fun way across multiple points of engagement. 
+                            Our final design proposal for PNC consisted of the <i>Gain</i> board game and companion app. By combining a short-term interactive experience with a long-term digital presence we could incentivize customers to engage with PNC across multiple touchpoints. The board game would act as an introduction to investment strategies, and the app would provide the customer with opportunities to use what they learned during gameplay.
                         </p>
                     </div>
                 </div>
             </section>
 
-            <section class="full-width-bg gameplay">
+            <section class="full-width-bg gameplay dark-theme">
                     <section class="wrapper">
-                       <div class="row title">
-                            <div class="col-xs-12 col-sm-12 offset-lg-1 left-col">
-                                <h4>Gameplay</h4>
-                            </div>
-                        </div>
-
                         <div class="row">
                             <div class="col-sm-12 col-md-6 col-lg-5 offset-lg-1 img-wrapper">
                                     <div class="highlight-copy">
-                                        <div class="subtitle">Getting started</div>   
+                                        <div class="section-title">Getting started</div>   
                                         <p class="copy">
                                                 To begin, the Gain app introduces each player to the rules of the game, and gives them a quick rundown on what the Dreams, Needs, and Chance cards are. Players then pick four Dream cards each from a deck and place them on their Dashboard; these “dreams” act as each player’s personal set of challenges they need to overcome to win the game.
                                         </p>
@@ -215,7 +249,7 @@
                         <div class="row padding">
                             <div class="col-sm-12 col-md-5 col-lg-4 offset-lg-1 img-wrapper">
                                     <div class="highlight-copy">
-                                        <div class="subtitle">Learning to invest</div>   
+                                        <div class="section-title">Learning to invest</div>   
                                         <p class="copy">
                                             In order to stress the importance of diversifying assets, the only way to earn enough money to accomplish the Dreams is by investing money through various means including stocks, bonds, IRAs, and etc. 
                                         </p>
@@ -233,7 +267,7 @@
 
                             <div class="col-md-6 col-lg-5 img-wrapper">
                                 <div class="highlight-copy">
-                                    <div class="subtitle">Challenges</div>   
+                                    <div class="section-title">Challenges</div>   
                                     <p class="copy">
                                         While users are moving their pieces around the board they will also encounter Chance cards and Needs cards, which can provide surprise income from events like inheritance or winning a local lottery, or induce unexepected costs like parking tickets and surgeries. These cards help emphasize that players need to do more than save money, they need to invest to help them cover unforseen costs.
                                     </p>
@@ -244,8 +278,8 @@
                     </section>
                 </section>
 
-                <section class="description">
-                    <div class="row  ">
+                <section id="gain-mobile-app" class="description">
+                    <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 offset-lg-1 left-col">
                           <h3>Mobile app</h3>
                         </div>
@@ -319,16 +353,18 @@
                     </div>
                 </section>
                 
-                <footer>
+                <footer class="dark-theme">
                     <section class="footer-wrapper">
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 offset-lg-1 left-col">
-                                <p>Say hello—<br> <a href="mailto:lealisamail@gmail.com">lealisamail@gmail.com</a></p>
-                            </div>
+                            <ul class="col-xs-12 col-sm-12 col-md-4 col-lg-3 offset-lg-1 simple">
+                                <li>Say hello—</li>
+                                <li><a href="mailto:lealisamail@gmail.com">lealisamail@gmail.com</a></li>
+                            </ul>
             
-                            <div class="col-sm-12 offset-sm-0 col-md-7 col-lg-6 offset-lg-1 col-xl-6 order-md-last">
-                                <p>Next project—<br> <a href="../contour">Redesigning core toolbar in Contour, a top-down analysis application</a></p>
-                            </div>
+                            <!-- <ul class="col-sm-12 offset-sm-0 col-md-7 col-lg-6 offset-lg-1 col-xl-6 simple">
+                                <li>Next project—</li> 
+                                <li><a href="../contour">Redesigning core toolbar in Contour, a top-down analysis application</a></li>
+                            </ul> -->
                         </div>
                     </section>   
                 </footer>
@@ -369,7 +405,12 @@
             $(this).addClass("load").dequeue();
           });
         });
-              
+
+
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 400
+        });
+
 
     </script>
   </body>
