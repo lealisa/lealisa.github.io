@@ -1,4 +1,5 @@
 @import "initial-variables.scss";
+@import "protected-page.scss";
 
 
 #home {
@@ -35,6 +36,11 @@ section {
 
 .sm-padding {
     margin-top: 4rem;
+}
+
+
+.xs-padding {
+    margin-top: 2rem;
 }
 
 .no-wrap {
@@ -271,7 +277,7 @@ section.full-width-bg {
 }
 
 .index-wrapper {
-    padding: 3rem 0 2rem;
+    padding: 4rem 0 3rem;
 }
 
 .image-row {
@@ -373,8 +379,8 @@ section.final-img {
 
         &.wip {
             pointer-events: none;
-            opacity: .3;
-
+            opacity: .5;
+                
             .subtitle {
                 color: $ocean;
             }
@@ -417,16 +423,21 @@ section.final-img {
                     transform .3s ease .2s;
                 }
             }
+
+            .copy {
+                color: $ocean;
+            }
         }
 
         .subtitle {
-            margin: 2px 0 0;
+           margin: 3px 0 0;
            text-align: right; 
         }
 
         .copy {
             font-family: $family-serif;
             margin-bottom: 0;
+            font-size: $size-5;
         }
     }
 }
@@ -554,10 +565,14 @@ footer {
         font-size: 6.5vw;
     }
 
-    .copy,
-    .about .copy,
-    .social-links-list {
-        max-width: 100%;
+
+    #home {
+        .copy,
+        .about .copy,
+        .social-links-list {
+            max-width: 100%;
+            min-width: 100%;
+        }
     }
 
     .image-row {

@@ -57,13 +57,13 @@ h1, h2, h3, h4, h5, h6 {
     display: contents; }
 
 .top-nav a {
-  font-family: aktiv-grotesk-extended, sans-serif;
+  font-family: aktiv-grotesk, sans-serif;
   font-size: 15px;
   font-weight: 400;
   z-index: 20; }
 
 a.website-title {
-  font-family: aktiv-grotesk-extended, sans-serif;
+  font-family: aktiv-grotesk, sans-serif;
   font-weight: 600;
   color: #7F8A8D; }
 
@@ -81,12 +81,12 @@ a.website-title {
     transition: all .3s ease; }
 
 .section-title {
-  font-family: aktiv-grotesk-extended, sans-serif;
-  font-size: 15px;
-  font-weight: 600;
+  font-family: aktiv-grotesk, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
   line-height: 150%;
   color: #2a434a;
-  margin-bottom: 1rem; }
+  margin: 0.35rem 0 1rem; }
 
 .details .section-title {
   margin-bottom: 0; }
@@ -108,12 +108,13 @@ a.website-title {
 a {
   color: #2a434a;
   font-family: aktiv-grotesk, sans-serif;
+  font-size: 1.1rem;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   -ms-transition: all .3s ease;
   transition: all .3s ease; }
   a:hover {
-    color: #2a434a;
+    color: #C36E38;
     text-decoration: none;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
@@ -146,7 +147,7 @@ a {
   .dark-theme a {
     color: white; }
     .dark-theme a:hover {
-      color: #C36E38; }
+      color: #E08D59; }
 
 ul li a,
 ol li a {
@@ -178,14 +179,13 @@ ol li {
 
 ol li::before {
   content: "0" counter(custom-counter);
-  font-family: aktiv-grotesk-extended, sans-serif;
+  font-family: aktiv-grotesk, sans-serif;
   font-weight: 600;
   font-size: 15px;
   margin-right: 1rem; }
 
 ul {
   padding-left: 1.25rem;
-  margin-right: 20px;
   list-style: none;
   padding-left: 0; }
 
@@ -368,6 +368,64 @@ ul li::before {
 
   .offset-xs-11 {
     margin-left: 91.666667%; } }
+input {
+  font-family: aktiv-grotesk, sans-serif;
+  font-size: 1rem;
+  padding: 0 1rem;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #afbcbf; }
+  input:focus {
+    outline: none;
+    border-bottom: 1px solid #2E353B; }
+
+#messageWrapper {
+  float: left;
+  vertical-align: middle;
+  line-height: 30px; }
+
+.notifyText {
+  font-family: aktiv-grotesk, sans-serif;
+  font-size: 1rem;
+  margin-left: 1rem;
+  display: none; }
+
+#invalidPass {
+  color: #C36E38; }
+
+#success {
+  color: #2a434a; }
+
+.button, .input-field {
+  margin-top: 0.5rem; }
+
+button.large-button {
+  font-family: aktiv-grotesk, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: white;
+  font-size: 0.75rem;
+  outline: none;
+  background-color: #2E353B;
+  width: 100%;
+  height: 50px;
+  transition: all 0.3s ease; }
+  button.large-button:hover {
+    opacity: 0.9;
+    transition: all 0.3s ease; }
+
+#contentFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+@media (max-width: 767px) {
+  .button {
+    margin-top: 0; } }
 #home {
   background-color: #F6F5F3; }
 
@@ -392,6 +450,9 @@ section {
 
 .sm-padding {
   margin-top: 4rem; }
+
+.xs-padding {
+  margin-top: 2rem; }
 
 .no-wrap {
   display: block;
@@ -555,7 +616,7 @@ section.full-width-bg {
   margin-bottom: 1.5rem; }
 
 .index-wrapper {
-  padding: 3rem 0 2rem; }
+  padding: 4rem 0 3rem; }
 
 .image-row {
   margin: 4rem 0 5rem; }
@@ -624,7 +685,7 @@ section.final-img {
     margin-top: 2rem; }
   .project-list .project.wip {
     pointer-events: none;
-    opacity: .3; }
+    opacity: .5; }
     .project-list .project.wip .subtitle {
       color: #2a434a; }
   .project-list .project .project-list-title {
@@ -652,12 +713,15 @@ section.final-img {
         width: 120%;
         transform: translate3d(-2rem, 0, 0);
         transition: width .3s ease .2s, transform .3s ease .2s; }
+    .project-list .project:hover .copy {
+      color: #2a434a; }
   .project-list .project .subtitle {
-    margin: 2px 0 0;
+    margin: 3px 0 0;
     text-align: right; }
   .project-list .project .copy {
     font-family: freight-text-pro, serif;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-size: 1.25rem; }
 
 footer {
   padding: 3rem 0;
@@ -737,10 +801,11 @@ footer {
     padding-right: 1rem;
     font-size: 6.5vw; }
 
-  .copy,
-  .about .copy,
-  .social-links-list {
-    max-width: 100%; }
+  #home .copy,
+  #home .about .copy,
+  #home .social-links-list {
+    max-width: 100%;
+    min-width: 100%; }
 
   .image-row {
     margin: 1rem 0; }
