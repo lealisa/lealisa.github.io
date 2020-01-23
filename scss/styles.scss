@@ -149,7 +149,7 @@ section {
 
 ul.simple {
     li {
-        margin-bottom: .5rem;
+        margin-bottom: .25rem;
 
         &::before {
             content: none;
@@ -187,7 +187,7 @@ section.full-width-bg {
     }
 
     &.contour {
-        background: #E4E9EB;
+        background: #E6E9EB;
     }
 }
 
@@ -262,7 +262,7 @@ section.full-width-bg {
             top: 6rem;
             box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
             height: 100%;
-            border-radius: 5px 5px 0 0;
+            border-radius: 5px;
         }
     }
 }
@@ -471,13 +471,13 @@ footer {
 @media (max-width: 991px) {
     .intro-title {
         font-size: $size-2;
+        max-width: 550px;
     }
 
     .img-intro {
         &.screen {
-            left: 58.33%;
+            // left: 58.33%;
 
-    
             img {
                 height: 95%;
             }
@@ -492,15 +492,22 @@ footer {
         max-width: 100%;
         text-align: left;
     }
- }
+}
  
- @media (max-width:  767px) {
+@media (max-width:  767px) {
     .intro-title {
         font-size: $size-2;
     }
 
     .project-title {
         font-size: $size-2;
+    }
+
+    .contour .project-title {
+        justify-content: flex-start;
+        margin-top: 12rem;
+        font-size: 2.5rem;
+        max-width: 475px;
     }
 
     .copy,
@@ -548,7 +555,18 @@ footer {
         }
     }
 
- }
+    .img-intro.screen {
+        padding: 15px;
+        left: 0;
+        top: 45%;
+        width: 100%;
+
+        img {
+            height: auto;
+            width: calc(100% - 30px);
+        }
+    }
+}
 
 
 
@@ -556,8 +574,14 @@ footer {
 @media (max-width: 576px) {
 
     .intro-title {
-        padding-right: 1rem;
-        font-size: 6.8vw;
+        font-size: 2rem;
+        text-align: left;
+        max-width: 440px;
+        margin-left: 0;
+    }
+
+    .project-intro {
+        height: 85vh;
     }
 
     .project-title {
@@ -591,6 +615,10 @@ footer {
             display: inline-block;
         }
 
+        .project-list-title {
+            font-size: 17px;
+        }
+
         .subtitle::before {
                content: "— ";
                display: inline-block;
@@ -600,5 +628,9 @@ footer {
         .copy {
             min-width: 100%;
         }
+    }
+
+    .img-intro.screen {
+        top: 50%;
     }
 }

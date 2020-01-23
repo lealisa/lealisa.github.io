@@ -125,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .top-nav a {
   font-family: $family-sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 400;
   z-index: 20;
 }
@@ -137,8 +137,9 @@ a.website-title {
 }
 
 #home {
-  .website-title {
-    color: $highlight;
+  .website-title img {
+    vertical-align: baseline;
+    opacity: 1;
 
     -webkit-transition: all .3s ease; 
     -moz-transition:   all .3s ease;; 
@@ -146,7 +147,7 @@ a.website-title {
     transition:  all .3s ease; 
 
     &:hover {
-      color: $smoke;
+      opacity: 0.8;
 
       -webkit-transition: all .3s ease; 
       -moz-transition:   all .3s ease;; 
@@ -250,7 +251,7 @@ a {
   }
 
   .section-title {
-    color: $light-smoke;
+    color: white;
   }
 
   a {
@@ -265,7 +266,7 @@ a {
 
 ul li a,
 ol li a {
-  font-size: 1.1rem;
+  font-size: 17px;
 
   &:hover {
     color: $highlight;
