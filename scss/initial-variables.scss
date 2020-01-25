@@ -254,6 +254,10 @@ a {
     color: white;
   }
 
+  p a:hover {
+    border-bottom: 1px solid #79513A;
+  }
+
   a {
     color: $white;
   
@@ -274,14 +278,22 @@ ol li a {
   }
 }
 
-p a {
+p a,
+h4 a {
   border-bottom: 1px solid $smoke;
-  font-size: 17px;
   
   &:hover {
     color: $highlight;
-    border-bottom: 1px solid #79513A;
+    border-bottom: 1px solid $highlight-dark;
   }
+}
+
+p a {
+    font-size: 17px;
+}
+
+h4 a {
+  font-size: 20px;
 }
 
 p.emphasis {

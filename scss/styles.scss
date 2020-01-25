@@ -218,6 +218,7 @@ section.full-width-bg {
     transform: translate3d(0, 20px, 0);
 }
 
+
 .project-title.load {
     opacity: 1;
     margin-bottom: 1rem;
@@ -226,6 +227,10 @@ section.full-width-bg {
 
 }
 
+
+.contour .project-title {
+    max-width: 475px;
+}
 
 .img-intro {
     z-index: 10;
@@ -507,7 +512,6 @@ footer {
         justify-content: flex-start;
         margin-top: 12rem;
         font-size: 2.5rem;
-        max-width: 475px;
     }
 
     .copy,
@@ -581,7 +585,7 @@ footer {
     }
 
     .project-intro {
-        height: 85vh;
+        height: 80vh;
     }
 
     .project-title {
