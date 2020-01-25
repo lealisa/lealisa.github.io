@@ -145,6 +145,8 @@ a {
     color: white; }
   .dark-theme .section-title {
     color: white; }
+  .dark-theme p a:hover {
+    border-bottom: 1px solid #79513A; }
   .dark-theme a {
     color: white; }
     .dark-theme a:hover {
@@ -158,12 +160,19 @@ ol li a {
     color: #C36E38;
     border-bottom: transparent; }
 
-p a {
-  border-bottom: 1px solid #7F8A8D;
-  font-size: 17px; }
-  p a:hover {
+p a,
+h4 a {
+  border-bottom: 1px solid #7F8A8D; }
+  p a:hover,
+  h4 a:hover {
     color: #C36E38;
-    border-bottom: 1px solid #79513A; }
+    border-bottom: 1px solid #E08D59; }
+
+p a {
+  font-size: 17px; }
+
+h4 a {
+  font-size: 20px; }
 
 p.emphasis {
   font-style: italic;
@@ -583,6 +592,9 @@ section.full-width-bg {
   transition: all 0.75s ease-in-out;
   transform: translate3d(0, 0, 0); }
 
+.contour .project-title {
+  max-width: 475px; }
+
 .img-intro {
   z-index: 10; }
   .img-intro.board {
@@ -765,8 +777,7 @@ footer {
   .contour .project-title {
     justify-content: flex-start;
     margin-top: 12rem;
-    font-size: 2.5rem;
-    max-width: 475px; }
+    font-size: 2.5rem; }
 
   .copy,
   .hmw,
@@ -816,7 +827,7 @@ footer {
     margin-left: 0; }
 
   .project-intro {
-    height: 85vh; }
+    height: 80vh; }
 
   .project-title {
     padding-right: 1rem;
