@@ -176,7 +176,7 @@ a.website-title {
   font-family: $family-sans-serif;
   line-height: 180%;
   color: $smoke;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 400;
   margin-bottom: 1rem;
 
@@ -188,6 +188,14 @@ a.website-title {
 
     &.center {
       text-align: center;
+    }
+
+    &.copy {
+      color: $wind;
+    }
+
+    b {
+      font-weight: 500;
     }
 }
 
@@ -246,12 +254,20 @@ a {
 .dark-theme {
   color: white;
 
-  h3, h4, .subtitle {
+  h3, h4 {
       color: white;
   }
 
   .section-title {
     color: white;
+  }
+
+  .subtitle {
+    color: $light-smoke;
+
+    b {
+      color: $light-smoke;
+    }
   }
 
   p a:hover {
