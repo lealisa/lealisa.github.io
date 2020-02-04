@@ -6,7 +6,7 @@
     background-color: $cream;
 }
 
-section {
+section, .top-nav {
     max-width: $max-width-content;
     margin: 0 auto;
 }
@@ -22,7 +22,8 @@ section {
 }
 
 .row {
-    margin: 0;
+    max-width: $max-width-content;
+    margin: 0 auto;
 
     &.title {
         margin-bottom: 3rem;
@@ -30,7 +31,7 @@ section {
 }
 
 .padding {
-    margin-top: 10vw;
+    margin-top: 12vw;
 }
 
 
@@ -159,20 +160,29 @@ ul.simple {
 
 // Project Styles
 
-.bluf,
-.description,
-.hmw,
-.gameplay,
+// .bluf,
+// .description,
+// .hmw,
+// .gameplay,
+// .info {
+
+// .lg-padding {
+//     padding-top: 8vw;
+//     padding-bottom: 10vw;
+// }
+
+.project-page section,
 .info {
     padding-top: 8vw;
     padding-bottom: 10vw;
 }
 
-section.full-width-bg {
+.full-width-bg {
     position: relative;
     max-width: 100%;
     background: $grey-lightest;
     overflow: hidden;
+
 
     &.dark-theme {
         background: $charcoal;
@@ -186,8 +196,21 @@ section.full-width-bg {
         background: white;
     }
 
-    &.contour {
+    &.contour,
+    &.contour-issues {
         background: #E6E9EB;
+    }
+
+    &.contour-final-block {
+        padding-bottom: 0;
+
+        div.copy {
+            margin-top: 1rem;
+        }
+
+        .subtitle.copy {
+            margin-bottom: 1.5rem;
+        }
     }
 }
 
@@ -281,8 +304,8 @@ section.full-width-bg {
     margin-bottom: 1.5rem;
 }
 
-.index-wrapper {
-    padding: 4rem 0 3rem;
+.index {
+    padding: 2.5rem 0;
 }
 
 .image-row {
@@ -293,6 +316,18 @@ section.full-width-bg {
     }
 }
 
+// .contour-personas {
+//     .subtitle {
+//         padding-top: 0;
+//     }
+
+//     img {
+//         max-width: 200px;
+//         display: flex;
+//         margin: 1rem auto;
+//     }
+// }
+
 .img-wrapper {
     padding: 1rem;
     z-index: 10;
@@ -300,13 +335,50 @@ section.full-width-bg {
     img {
         width: 100%;
         align-self: center;
+
+        &.border {
+            border: 1px solid $air;
+            border-radius: 5px;
+        }
     }
+
+    &.screen img {
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+        border-radius: 3px;
+    }
+}
+
+.dark-theme .img-wrapper.screen img  {
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
 }
 
 section.full-width-bg.hmw {
     .img-wrapper img {
         max-width: 400px;
         margin: auto;
+    }
+
+    ol.simple {
+        margin-bottom: 0;
+
+        li:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        li::before {
+            position: absolute;
+            left: -30px;
+            color: $light-smoke;
+            margin-top: 10px;
+        }
+
+        .subtitle {
+            max-width: 510px;
+        }
+
+        h4 {
+            margin-bottom: 0.25rem;
+        }
     }
 }
 
@@ -316,12 +388,8 @@ section.full-width-bg.hmw,
 section.full-width-bg.gameplay {
     color: white;
 
-    h3, h4, .subtitle {
+    h3, h4 {
         color: white;
-    }
-
-    .subtitle {
-        opacity: 0.6;
     }
 
     .img-wrapper {
@@ -350,12 +418,23 @@ section.full-width-bg.gameplay {
 }
 
 section.final-img {
-    background-image: url("../img/final_gain.jpg");
     background-size: cover;
     height: 50vw;
     max-height: 850px;
     min-height: 300px;
     z-index: 10;
+
+    &.gain {
+        background-image: url("../img/final_gain.jpg");
+        background-size: cover;
+    }
+
+    &.contour {
+        background-image: url("../img/mid_fi_final.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 
 
@@ -435,7 +514,7 @@ section.final-img {
         }
 
         .subtitle {
-           margin: 3px 0 0;
+           margin: 2px 0 0;
            text-align: right; 
         }
 
@@ -492,11 +571,6 @@ footer {
     .project-title {
         font-size: $size-2;
     }
-
-    .subtitle.right {
-        max-width: 100%;
-        text-align: left;
-    }
 }
  
 @media (max-width:  767px) {
@@ -512,6 +586,15 @@ footer {
         justify-content: flex-start;
         margin-top: 12rem;
         font-size: 2.5rem;
+    }
+
+    .image-row {
+        .subtitle {
+            max-width: 100%;
+            text-align: center;
+            margin: 0 auto 1rem;
+            padding-top: 0;
+        }
     }
 
     .copy,
@@ -570,6 +653,19 @@ footer {
             width: calc(100% - 30px);
         }
     }
+
+    section.full-width-bg.hmw  ol.simple { 
+        margin-left: 35px;
+        
+        li::before {
+            left: 15px;
+        }
+
+        .subtitle {
+            max-width: 100%;
+        }
+    }
+    
 }
 
 
@@ -605,6 +701,10 @@ footer {
 
     .image-row {
         margin: 1rem 0;
+
+            .subtitle {
+                padding-top: 0;
+            }
     }
 
     #home .project-list {
@@ -635,6 +735,6 @@ footer {
     }
 
     .img-intro.screen {
-        top: 50%;
+        top: 52%;
     }
 }
