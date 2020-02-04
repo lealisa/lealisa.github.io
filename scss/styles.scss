@@ -6,7 +6,7 @@
     background-color: $cream;
 }
 
-section {
+section, .top-nav {
     max-width: $max-width-content;
     margin: 0 auto;
 }
@@ -22,7 +22,8 @@ section {
 }
 
 .row {
-    margin: 0;
+    max-width: $max-width-content;
+    margin: 0 auto;
 
     &.title {
         margin-bottom: 3rem;
@@ -30,7 +31,7 @@ section {
 }
 
 .padding {
-    margin-top: 10vw;
+    margin-top: 12vw;
 }
 
 
@@ -199,6 +200,18 @@ ul.simple {
     &.contour-issues {
         background: #E6E9EB;
     }
+
+    &.contour-final-block {
+        padding-bottom: 0;
+
+        div.copy {
+            margin-top: 1rem;
+        }
+
+        .subtitle.copy {
+            margin-bottom: 1.5rem;
+        }
+    }
 }
 
 
@@ -303,6 +316,18 @@ ul.simple {
     }
 }
 
+// .contour-personas {
+//     .subtitle {
+//         padding-top: 0;
+//     }
+
+//     img {
+//         max-width: 200px;
+//         display: flex;
+//         margin: 1rem auto;
+//     }
+// }
+
 .img-wrapper {
     padding: 1rem;
     z-index: 10;
@@ -310,12 +335,21 @@ ul.simple {
     img {
         width: 100%;
         align-self: center;
+
+        &.border {
+            border: 1px solid $air;
+            border-radius: 5px;
+        }
     }
 
     &.screen img {
-        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
-        border-radius: 5px;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+        border-radius: 3px;
     }
+}
+
+.dark-theme .img-wrapper.screen img  {
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
 }
 
 section.full-width-bg.hmw {
@@ -554,10 +588,13 @@ footer {
         font-size: 2.5rem;
     }
 
-
-    .subtitle.right {
-        max-width: 100%;
-        text-align: left;
+    .image-row {
+        .subtitle {
+            max-width: 100%;
+            text-align: center;
+            margin: 0 auto 1rem;
+            padding-top: 0;
+        }
     }
 
     .copy,
@@ -664,6 +701,10 @@ footer {
 
     .image-row {
         margin: 1rem 0;
+
+            .subtitle {
+                padding-top: 0;
+            }
     }
 
     #home .project-list {
@@ -694,6 +735,6 @@ footer {
     }
 
     .img-intro.screen {
-        top: 50%;
+        top: 52%;
     }
 }

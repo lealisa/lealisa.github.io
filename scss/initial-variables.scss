@@ -132,8 +132,8 @@ h1, h2, h3, h4, h5, h6 {
 
 a.website-title {
   font-family: $family-sans-serif;
-  font-weight: 600;
-  color: $smoke;
+  font-weight: 500;
+  color: $highlight;
 }
 
 #home {
@@ -192,6 +192,7 @@ a.website-title {
 
     &.copy {
       color: $wind;
+      margin-top: 0.5rem;
     }
 
     b {

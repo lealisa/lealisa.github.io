@@ -64,8 +64,8 @@ h1, h2, h3, h4, h5, h6 {
 
 a.website-title {
   font-family: aktiv-grotesk, sans-serif;
-  font-weight: 600;
-  color: #7F8A8D; }
+  font-weight: 500;
+  color: #C36E38; }
 
 #home .website-title img {
   vertical-align: baseline;
@@ -106,7 +106,8 @@ a.website-title {
   .subtitle.center {
     text-align: center; }
   .subtitle.copy {
-    color: #54666B; }
+    color: #54666B;
+    margin-top: 0.5rem; }
   .subtitle b {
     font-weight: 500; }
 
@@ -448,7 +449,7 @@ button.large-button {
 #home {
   background-color: #F6F5F3; }
 
-section {
+section, .top-nav {
   max-width: 1680px;
   margin: 0 auto; }
 
@@ -460,12 +461,13 @@ section {
   transition: all 0.5s ease-in-out; }
 
 .row {
-  margin: 0; }
+  max-width: 1680px;
+  margin: 0 auto; }
   .row.title {
     margin-bottom: 3rem; }
 
 .padding {
-  margin-top: 10vw; }
+  margin-top: 12vw; }
 
 .sm-padding {
   margin-top: 4rem; }
@@ -570,6 +572,12 @@ ul.simple li {
     background: white; }
   .full-width-bg.contour, .full-width-bg.contour-issues {
     background: #E6E9EB; }
+  .full-width-bg.contour-final-block {
+    padding-bottom: 0; }
+    .full-width-bg.contour-final-block div.copy {
+      margin-top: 1rem; }
+    .full-width-bg.contour-final-block .subtitle.copy {
+      margin-bottom: 1.5rem; }
 
 .project-intro {
   height: 100vh;
@@ -648,9 +656,15 @@ ul.simple li {
   .img-wrapper img {
     width: 100%;
     align-self: center; }
+    .img-wrapper img.border {
+      border: 1px solid #ccdbdd;
+      border-radius: 5px; }
   .img-wrapper.screen img {
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
-    border-radius: 5px; }
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 3px; }
+
+.dark-theme .img-wrapper.screen img {
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25); }
 
 section.full-width-bg.hmw .img-wrapper img {
   max-width: 400px;
@@ -799,9 +813,11 @@ footer {
     margin-top: 12rem;
     font-size: 2.5rem; }
 
-  .subtitle.right {
+  .image-row .subtitle {
     max-width: 100%;
-    text-align: left; }
+    text-align: center;
+    margin: 0 auto 1rem;
+    padding-top: 0; }
 
   .copy,
   .hmw,
@@ -872,6 +888,8 @@ footer {
 
   .image-row {
     margin: 1rem 0; }
+    .image-row .subtitle {
+      padding-top: 0; }
 
   #home .project-list .project {
     margin-top: 0.5rem;
@@ -890,6 +908,6 @@ footer {
     min-width: 100%; }
 
   .img-intro.screen {
-    top: 50%; } }
+    top: 52%; } }
 
 /*# sourceMappingURL=styles.css.map */
