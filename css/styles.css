@@ -662,8 +662,6 @@ ul.simple li {
       border: 1px solid #ccdbdd;
       border-radius: 5px; }
   .img-wrapper.screen-scroll {
-    padding: 0;
-    margin: 1rem;
     max-height: 500px;
     overflow-y: scroll; }
   .img-wrapper.screen img {
@@ -799,10 +797,8 @@ footer {
   .intro-title {
     font-size: 58px; }
 
-  .bluf,
-  .description,
-  .hmw,
-  .gameplay {
+  .project-page section,
+  .info {
     padding-top: 135px;
     padding-bottom: 168px; } }
 @media (max-width: 991px) {
