@@ -67,7 +67,7 @@ body {
   background-color: $haze;
   font-family: $family-serif;
   font-weight: $weight-normal;
-  font-size: $size-5;
+  font-size: 18px;
   overflow-x: hidden;
   height: 100%;
   width: 100%;
@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a.website-title {
   font-family: $family-sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   color: $highlight;
 }
 
@@ -176,7 +176,7 @@ a.website-title {
   font-family: $family-sans-serif;
   line-height: 180%;
   color: $smoke;
-  font-size: 1rem;
+  font-size: 15px;
   font-weight: 400;
   margin-bottom: 1rem;
 
@@ -189,15 +189,6 @@ a.website-title {
     &.center {
       text-align: center;
     }
-
-    &.copy {
-      color: $wind;
-      margin-top: 0.5rem;
-    }
-
-    b {
-      font-weight: 500;
-    }
 }
 
 
@@ -205,7 +196,7 @@ a.website-title {
 a {
   color: $ocean;
   font-family: $family-sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
 
   -webkit-transition: all .3s ease; 
   -moz-transition:   all .3s ease;; 
@@ -222,35 +213,37 @@ a {
     transition:  all .3s ease; 
   }
 
-  &.external {
+  &.arrow {
+    &::before,
     &::after {
-      content: " ↗";
-      opacity: 0;
+      background-size: contain;
+      content: "";
+      display: inline-block;
+      margin-top: 2px;
+      height: 11px;
       color: $highlight;
-      font-weight: $weight-semibold;
-      
-      -webkit-transition: all .3s ease; 
-      -moz-transition:   all .3s ease;; 
-      -ms-transition:  all .3s ease;; 
-      transition:  all .3s ease; 
     }
     
     &:hover {
       color: $highlight;
+    }
 
-      &::after {
-        opacity: 1;
-        
-        -webkit-transition: all .3s ease; 
-        -moz-transition:   all .3s ease;; 
-        -ms-transition:  all .3s ease;; 
-        transition:  all .3s ease; 
-        
-      }
+    &.external::before {
+      background: url("../img/link-arrow.svg") no-repeat center center;
+      margin-right: 5px;
+      width: 14px;
+    }
+
+    &.scroll-down::after {
+      background: url("../img/link-arrow-down.svg") no-repeat center center;
+      margin-left: 5px;
+      width: 14px;
     }
   }
-
 }
+
+
+
 
 .dark-theme {
   color: white;
@@ -259,20 +252,12 @@ a {
       color: white;
   }
 
-  .section-title {
-    color: white;
-  }
-
   .subtitle {
     color: $light-smoke;
-
-    b {
-      color: $light-smoke;
-    }
   }
 
-  p a:hover {
-    border-bottom: 1px solid #79513A;
+  .section-title {
+    color: white;
   }
 
   a {
@@ -287,7 +272,7 @@ a {
 
 ul li a,
 ol li a {
-  font-size: 17px;
+  font-size: 1rem;
 
   &:hover {
     color: $highlight;
@@ -295,22 +280,14 @@ ol li a {
   }
 }
 
-p a,
-h4 a {
-  border-bottom: 1px solid $smoke;
+p a {
+  border-bottom: 1px solid $light-smoke;
+  font-size: 16px;
   
   &:hover {
     color: $highlight;
     border-bottom: 1px solid $highlight-dark;
   }
-}
-
-p a {
-    font-size: 17px;
-}
-
-h4 a {
-  font-size: 20px;
 }
 
 p.emphasis {
@@ -369,6 +346,10 @@ $xl-spacing: 12rem !default;
 $tablet-margin: 0;
 $mobile-margin: 0;
 
+.left-col-padding {
+  padding-left: 15px;
+}
+
 // Miscellaneous
 
 $easing: ease-out !default;
@@ -383,7 +364,7 @@ $speed: 86ms !default;
 $variable-columns: true !default;
 
 
-// Missing braeakpoint
+// Missing breakpoint
 
 @media (max-width: 576px) {
     .col-xs {
