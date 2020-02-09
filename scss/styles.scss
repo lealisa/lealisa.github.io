@@ -467,18 +467,20 @@ section.final-img {
         line-height: 120%;
         border-bottom: 1px solid transparent;
 
-        // &::after {
-        //     display:block;
-        //     content: '';
-        //     border-bottom: solid 1px $smoke;  
-        //     transform: scaleX(0);  
-        //     transform-origin:  0% 50%;
-        //     transition: transform 0.3s ease-in-out;
-        // }
+        &::after {
+            display:block;
+            content: '';
+            border-bottom: solid 1px $smoke;  
+            transform: scaleX(0);  
+            transform-origin:  0% 50%;
+            transition: transform 0.3s ease-in-out;
+        }
     }
     
     .subtitle {
         margin: 1rem 0 0;
+        color: $smoke;
+        font-size: 1rem;
     }
 
     .project {
@@ -497,22 +499,29 @@ section.final-img {
 
         &.wip {
             pointer-events: none;
-            opacity: .5;
+
+            .img-wrapper {
+                opacity: .5;
+            }
+
+            .project-list-title {
+                color: $smoke;
+            }
         }
 
        &:hover {
            .img-wrapper {
-                opacity: 0.8;
+                opacity: 0.85;
                 transition: all .3s ease;
             }
 
             .project-list-title {
                 transition: all .3s ease;
-                border-bottom: 1px solid $smoke;
+                // border-bottom: 1px solid $smoke;
 
-                // &::after {
-                //     transform: scaleX(1);
-                // }
+                &::after {
+                    transform: scaleX(1);
+                }
             }
         }
     }
