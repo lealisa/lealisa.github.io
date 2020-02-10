@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&text=%E2%86%90|%E2%86%92");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&text=%E2%86%90|%E2%86%92|%E2%86%93");
 ::selection {
   background-color: #ccdbdd; }
 
@@ -58,14 +58,14 @@ h1, h2, h3, h4, h5, h6 {
     display: contents; }
 
 .top-nav a {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: aktiv-grotesk, sans-serif;
   font-size: 17px;
   font-weight: 400;
   z-index: 20; }
 
 a.website-title {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
+  font-family: aktiv-grotesk, sans-serif;
+  font-weight: 500;
   color: #C36E38; }
 
 #home .website-title img {
@@ -83,7 +83,7 @@ a.website-title {
     transition: all .3s ease; }
 
 .section-title {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: aktiv-grotesk, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 150%;
@@ -94,7 +94,7 @@ a.website-title {
   margin-bottom: 0; }
 
 .subtitle {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: aktiv-grotesk, sans-serif;
   line-height: 180%;
   color: #7F8A8D;
   font-size: 15px;
@@ -109,7 +109,7 @@ a.website-title {
 
 a {
   color: #2a434a;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: aktiv-grotesk, sans-serif;
   font-size: 1rem;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
@@ -122,23 +122,26 @@ a {
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
     transition: all .3s ease; }
-  a.arrow::before, a.arrow::after {
+  a.external::before {
+    background: url("../img/link-arrow.svg") no-repeat center center;
+    margin-right: 5px;
+    width: 14px;
     background-size: contain;
     content: "";
     display: inline-block;
     margin-top: 2px;
     height: 11px;
     color: #C36E38; }
-  a.arrow:hover {
+  a.external:hover {
     color: #C36E38; }
-  a.arrow.external::before {
-    background: url("../img/link-arrow.svg") no-repeat center center;
-    margin-right: 5px;
-    width: 14px; }
-  a.arrow.scroll-down::after {
-    background: url("../img/link-arrow-down.svg") no-repeat center center;
-    margin-left: 5px;
-    width: 14px; }
+  a.arrow-down::after {
+    display: inline-flex;
+    content: "↓";
+    margin-left: 0.5rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.25rem;
+    color: #C36E38;
+    opacity: 1; }
 
 .dark-theme {
   color: white; }
@@ -183,7 +186,7 @@ ol li {
 
 ol li::before {
   content: "0" counter(custom-counter);
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: aktiv-grotesk, sans-serif;
   font-weight: 600;
   font-size: 15px;
   margin-right: 1rem; }
@@ -376,7 +379,7 @@ ul li::before {
   .offset-xs-11 {
     margin-left: 91.666667%; } }
 input {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: aktiv-grotesk, sans-serif;
   font-size: 1rem;
   padding: 0 1rem;
   width: 100%;
@@ -393,7 +396,7 @@ input {
   line-height: 30px; }
 
 .notifyText {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: aktiv-grotesk, sans-serif;
   font-size: 1rem;
   margin-left: 1rem;
   display: none; }
@@ -408,7 +411,7 @@ input {
   margin-top: 0.5rem; }
 
 button.large-button {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: aktiv-grotesk, sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -512,7 +515,7 @@ section, .top-nav {
   position: absolute; }
   .sup-container .superscript {
     padding-top: 10px;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: aktiv-grotesk, sans-serif;
     color: #7F8A8D;
     font-size: 1rem;
     letter-spacing: .1px;
@@ -730,7 +733,7 @@ section.final-img {
     display: inline-flex;
     content: "→";
     margin-left: 0.5rem;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     color: #E08D59;
     opacity: 0;
     transform: translateX(-100%);
@@ -738,7 +741,7 @@ section.final-img {
 .project-list .subtitle {
   margin: 1rem 0 0;
   color: #7F8A8D;
-  font-size: 1rem; }
+  font-size: 17px; }
 .project-list .project {
   margin-top: 2rem; }
   .project-list .project .img-wrapper {
