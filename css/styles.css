@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&text=%E2%86%90|%E2%86%92");
 ::selection {
   background-color: #ccdbdd; }
 
@@ -57,13 +58,13 @@ h1, h2, h3, h4, h5, h6 {
     display: contents; }
 
 .top-nav a {
-  font-family: aktiv-grotesk, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 17px;
   font-weight: 400;
   z-index: 20; }
 
 a.website-title {
-  font-family: aktiv-grotesk, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   color: #C36E38; }
 
@@ -82,7 +83,7 @@ a.website-title {
     transition: all .3s ease; }
 
 .section-title {
-  font-family: aktiv-grotesk, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 150%;
@@ -93,7 +94,7 @@ a.website-title {
   margin-bottom: 0; }
 
 .subtitle {
-  font-family: aktiv-grotesk, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   line-height: 180%;
   color: #7F8A8D;
   font-size: 15px;
@@ -108,7 +109,7 @@ a.website-title {
 
 a {
   color: #2a434a;
-  font-family: aktiv-grotesk, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
@@ -182,7 +183,7 @@ ol li {
 
 ol li::before {
   content: "0" counter(custom-counter);
-  font-family: aktiv-grotesk, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   font-size: 15px;
   margin-right: 1rem; }
@@ -375,7 +376,7 @@ ul li::before {
   .offset-xs-11 {
     margin-left: 91.666667%; } }
 input {
-  font-family: aktiv-grotesk, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   padding: 0 1rem;
   width: 100%;
@@ -392,7 +393,7 @@ input {
   line-height: 30px; }
 
 .notifyText {
-  font-family: aktiv-grotesk, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   margin-left: 1rem;
   display: none; }
@@ -407,7 +408,7 @@ input {
   margin-top: 0.5rem; }
 
 button.large-button {
-  font-family: aktiv-grotesk, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -511,7 +512,7 @@ section, .top-nav {
   position: absolute; }
   .sup-container .superscript {
     padding-top: 10px;
-    font-family: aktiv-grotesk, sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     color: #7F8A8D;
     font-size: 1rem;
     letter-spacing: .1px;
@@ -726,12 +727,14 @@ section.final-img {
   line-height: 120%;
   border-bottom: 1px solid transparent; }
   .project-list-title::after {
-    display: block;
-    content: '';
-    border-bottom: solid 1px #7F8A8D;
-    transform: scaleX(0);
-    transform-origin: 0% 50%;
-    transition: transform 0.3s ease-in-out; }
+    display: inline-flex;
+    content: "→";
+    margin-left: 0.5rem;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #E08D59;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.694, 0, 0.335, 1) 0s, opacity 0.3s cubic-bezier(0.694, 0, 0.335, 1) 0s; }
 .project-list .subtitle {
   margin: 1rem 0 0;
   color: #7F8A8D;
@@ -752,12 +755,13 @@ section.final-img {
     .project-list .project.wip .project-list-title {
       color: #7F8A8D; }
   .project-list .project:hover .img-wrapper {
-    opacity: 0.85;
+    opacity: 0.8;
     transition: all .3s ease; }
   .project-list .project:hover .project-list-title {
     transition: all .3s ease; }
     .project-list .project:hover .project-list-title::after {
-      transform: scaleX(1); }
+      opacity: 1;
+      transform: translateX(0); }
 .project-list.sec-section {
   margin-top: 7rem; }
   .project-list.sec-section .project {

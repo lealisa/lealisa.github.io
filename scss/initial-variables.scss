@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&text=%E2%86%90|%E2%86%92');
 // Colors
 
 $black:        hsl(0, 0%, 4%) !default;
@@ -32,7 +33,7 @@ $highlight-dark: #E08D59;
 
 // Typography
 
-$family-sans-serif: aktiv-grotesk, sans-serif;
+$family-sans-serif: 'Source Sans Pro', sans-serif;
 // $family-sans-serif: aktiv-grotesk-extended, sans-serif;
 $font-style: normal;
 $family-serif: freight-text-pro, serif;
