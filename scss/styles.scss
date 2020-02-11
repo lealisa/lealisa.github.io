@@ -481,12 +481,14 @@ section.final-img {
         border-bottom: 1px solid transparent;
 
         &::after {
-            display:block;
-            content: '';
-            border-bottom: solid 1px $smoke;  
-            transform: scaleX(0);  
-            transform-origin:  0% 50%;
-            transition: transform 0.3s ease-in-out;
+            display: inline-flex;
+            content: "→";
+            margin-left: 0.5rem;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: $highlight-dark;
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: transform 0.3s cubic-bezier(0.694, 0, 0.335, 1) 0s, opacity 0.3s cubic-bezier(0.694, 0, 0.335, 1) 0s;
         }
     }
     
@@ -524,16 +526,16 @@ section.final-img {
 
        &:hover {
            .img-wrapper {
-                opacity: 0.85;
+                opacity: 0.8;
                 transition: all .3s ease;
             }
 
             .project-list-title {
                 transition: all .3s ease;
-                // border-bottom: 1px solid $smoke;
 
                 &::after {
-                    transform: scaleX(1);
+                    opacity: 1;
+                    transform: translateX(0);
                 }
             }
         }

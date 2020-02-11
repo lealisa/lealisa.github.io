@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&text=%E2%86%90|%E2%86%92|%E2%86%93');
+
 // Colors
 
 $black:        hsl(0, 0%, 4%) !default;
@@ -134,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a.website-title {
   font-family: $family-sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   color: $highlight;
 }
 
@@ -212,9 +214,11 @@ a {
     transition:  all .3s ease; 
   }
 
-  &.arrow {
-    &::before,
-    &::after {
+  &.external {
+    &::before {
+      background: url("../img/link-arrow.svg") no-repeat center center;
+      margin-right: 5px;
+      width: 14px;
       background-size: contain;
       content: "";
       display: inline-block;
@@ -226,17 +230,17 @@ a {
     &:hover {
       color: $highlight;
     }
+  }
 
-    &.external::before {
-      background: url("../img/link-arrow.svg") no-repeat center center;
-      margin-right: 5px;
-      width: 14px;
-    }
-
-    &.scroll-down::after {
-      background: url("../img/link-arrow-down.svg") no-repeat center center;
-      margin-left: 5px;
-      width: 14px;
+  &.arrow-down {
+    &::after {
+      display: inline-flex;
+      content: "↓";
+      margin-left: 0.5rem;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 1.25rem;
+      color: $highlight;
+      opacity: 1;
     }
   }
 }
