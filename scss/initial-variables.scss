@@ -73,10 +73,12 @@ body {
   width: 100%;
   margin: 0 auto;
   cursor: default;
+  line-height: 165%;
 }
 
 p {
-  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 #grid-lines {
@@ -167,16 +169,12 @@ a.website-title {
   margin: 0.35rem 0 1rem;
 }
 
-.details .section-title {
-  margin-bottom: 0;
-}
-
 
 .subtitle {
   font-family: $family-sans-serif;
   line-height: 180%;
   color: $smoke;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 400;
   margin-bottom: 1rem;
 
@@ -184,6 +182,7 @@ a.website-title {
       text-align: right;
       max-width: 345px;
       margin-left: auto;
+      margin-top: 0;
     }
 
     &.center {
@@ -280,14 +279,24 @@ ol li a {
   }
 }
 
-p a {
+
+p a, 
+h4 a {
   border-bottom: 1px solid $light-smoke;
-  font-size: 16px;
   
   &:hover {
     color: $highlight;
     border-bottom: 1px solid $highlight-dark;
   }
+}
+
+p a {
+  font-size: 1rem;
+}
+
+
+h4 a {
+  font-size: 1.25rem;
 }
 
 p.emphasis {

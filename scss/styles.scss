@@ -201,6 +201,10 @@ ul.simple {
         background: #EAEBEA;
     }
 
+    &.welcome-screens {
+        background: #E6E9EB;
+    }
+
     &.contour-final-block {
         padding-bottom: 0;
 
@@ -304,6 +308,17 @@ ul.simple {
     margin-bottom: 1.5rem;
 }
 
+.details {
+    .section-title {
+      margin-bottom: 0;
+    }
+  
+    p {
+      margin-top: 0;
+    }
+}
+
+
 .index {
     padding: 2.5rem 0;
 }
@@ -315,18 +330,6 @@ ul.simple {
         padding-top: 1rem;
     }
 }
-
-// .contour-personas {
-//     .subtitle {
-//         padding-top: 0;
-//     }
-
-//     img {
-//         max-width: 200px;
-//         display: flex;
-//         margin: 1rem auto;
-//     }
-// }
 
 .img-wrapper {
     padding: 1rem;
@@ -357,7 +360,8 @@ ul.simple {
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
 }
 
-.palantir-students .project-intro {
+.palantir-students .project-intro,
+.welcome-screens .project-intro {
     .img-wrapper {
         padding: 0;
 
@@ -366,9 +370,14 @@ ul.simple {
         }
     }
     
-    .screen {
+    .screen,
+    .grid {
         display: none;
     }
+}
+
+.welcome-screens .project-intro img {
+    margin-top: -4rem;
 }
 
 section.full-width-bg.hmw {
@@ -388,7 +397,7 @@ section.full-width-bg.hmw {
             position: absolute;
             left: -30px;
             color: $light-smoke;
-            margin-top: 10px;
+            margin-top: 6px;
         }
 
         .subtitle {
@@ -454,6 +463,10 @@ section.final-img {
         background-repeat: no-repeat;
         background-position: center;
     }
+}
+
+.project-page section.welcome-screens.explorations {
+    padding: 3rem 0;
 }
 
 
@@ -602,7 +615,8 @@ footer {
     }
 
     .contour .project-title,
-    .palantir-students .project-intro .project-title {
+    .palantir-students .project-intro .project-title,
+    .welcome-screens .project-intro .project-title {
         justify-content: flex-start;
         margin-top: 10rem;
         font-size: 2.5rem;
@@ -613,7 +627,6 @@ footer {
             max-width: 100%;
             text-align: center;
             margin: 0 auto 1rem;
-            padding-top: 0;
         }
     }
 
@@ -662,7 +675,8 @@ footer {
         }
     }
 
-    .img-intro.screen {
+    .img-intro.screen,
+    .img-intro.grid {
         position: absolute;
         padding: 15px;
         left: 0;
@@ -671,12 +685,27 @@ footer {
 
         img {
             height: auto;
-            width: calc(100% - 30px);
+            width: 100%;
         }
     }
+    
+    .img-intro.screen img {
+        width: calc(100% - 30px);
+    }
+
+    .img-intro.grid img {
+        margin-top: 3rem;
+    }
+
 
     .palantir-students .project-intro {
         .img-intro.screen {
+            display: block;
+        }
+    }
+
+    .welcome-screens .project-intro {
+        .img-intro.grid {
             display: block;
         }
     }
@@ -716,6 +745,13 @@ footer {
         font-size: 6.5vw;
     }
 
+    .contour .project-title,
+    .palantir-students .project-intro .project-title,
+    .welcome-screens .project-intro .project-title {
+        justify-content: flex-start;
+        margin-top: 10rem;
+        font-size: 2.25rem;
+    }
 
     #home {
         .copy,
@@ -728,17 +764,14 @@ footer {
 
     .image-row {
         margin: 1rem 0;
-
-            .subtitle {
-                padding-top: 0;
-            }
     }
 
     .project-list.sec-section .subtitle {
         text-align: left;
     }
     
-    .img-intro.screen {
+    .img-intro.screen,
+    .img-intro.grid {
         top: 52%;
     }
 }
