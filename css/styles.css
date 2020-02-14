@@ -145,7 +145,7 @@ a {
 
 .dark-theme {
   color: white; }
-  .dark-theme h3, .dark-theme h4 {
+  .dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4, .dark-theme h5 {
     color: white; }
   .dark-theme .subtitle {
     color: #afbcbf; }
@@ -155,6 +155,8 @@ a {
     color: white; }
     .dark-theme a:hover {
       color: #E08D59; }
+  .dark-theme a.website-title {
+    color: #E08D59; }
 
 ul li a,
 ol li a {
@@ -577,6 +579,19 @@ ul.simple li {
       margin-top: 1rem; }
     .full-width-bg.contour-final-block .subtitle.copy {
       margin-bottom: 1.5rem; }
+  .full-width-bg.gaia {
+    background-color: #202B33; }
+    .full-width-bg.gaia::before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.15;
+      background-image: url("../img/gaia-bg.jpg");
+      background-size: cover; }
 
 .project-intro {
   height: 100vh;

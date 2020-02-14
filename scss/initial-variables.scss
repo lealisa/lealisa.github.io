@@ -251,7 +251,7 @@ a {
 .dark-theme {
   color: white;
 
-  h3, h4 {
+  h1, h2, h3, h4, h5 {
       color: white;
   }
 
@@ -269,6 +269,10 @@ a {
     &:hover {
       color: $highlight-dark;
     }
+  }
+
+  a.website-title {
+    color: $highlight-dark;
   }
 }
 
