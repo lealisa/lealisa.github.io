@@ -216,6 +216,23 @@ ul.simple {
             margin-bottom: 1.5rem;
         }
     }
+
+    &.gaia {
+        background-color: #202B33;
+
+        &::before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            background-image: url("../img/gaia-bg.jpg");
+            background-size: cover;
+        }
+    }
 }
 
 
