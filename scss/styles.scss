@@ -217,6 +217,27 @@ ul.simple {
         }
     }
 
+    &.moonark {
+        background-color: #202125;
+        
+        &::before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            min-width: 600px;
+            height: 100%;
+            opacity: 0.5;
+            background-image: url("../img/moonark_intro.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position-x: right;
+            background-position-y: bottom;
+        }
+    }
+
     &.gaia {
         background-color: #202B33;
 
