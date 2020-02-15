@@ -642,13 +642,13 @@ ul.simple li {
   .img-intro.board {
     position: absolute;
     top: -3rem;
-    right: 0; }
+    right: -15px; }
     .img-intro.board img {
       width: 100%; }
   .img-intro.cards {
     position: absolute;
     bottom: 0;
-    left: 0; }
+    left: -15px; }
     .img-intro.cards img {
       width: 85%; }
   .img-intro.screen {
@@ -950,17 +950,12 @@ footer {
 
   .project-intro {
     height: 80vh; }
-
-  .project-title {
-    padding-right: 1rem;
-    font-size: 6.5vw; }
-
-  .contour .project-title,
-  .palantir-students .project-intro .project-title,
-  .welcome-screens .project-intro .project-title {
-    justify-content: flex-start;
-    margin-top: 10rem;
-    font-size: 2.25rem; }
+    .project-intro .project-title {
+      padding-right: 1rem;
+      justify-content: flex-start;
+      text-align: left;
+      margin-top: 10rem;
+      font-size: 2.25rem; }
 
   #home .copy,
   #home .about .copy,
