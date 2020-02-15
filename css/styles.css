@@ -623,6 +623,7 @@ ul.simple li {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  max-width: 510px;
   font-size: 2.5rem;
   text-align: right;
   margin: auto;
@@ -635,9 +636,6 @@ ul.simple li {
   margin-bottom: 1rem;
   transition: all 0.75s ease-in-out;
   transform: translate3d(0, 0, 0); }
-
-.contour .project-title {
-  max-width: 475px; }
 
 .img-intro {
   z-index: 10; }
@@ -676,7 +674,8 @@ ul.simple li {
 .details .section-title {
   margin-bottom: 0; }
 .details p {
-  margin-top: 0; }
+  margin-top: 0;
+  max-width: 300px; }
 
 .index {
   padding: 2.5rem 0; }

@@ -274,6 +274,7 @@ ul.simple {
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    max-width: 510px;
     font-size: 2.5rem;
     text-align: right;
     margin: auto;
@@ -292,10 +293,6 @@ ul.simple {
 
 }
 
-
-.contour .project-title {
-    max-width: 475px;
-}
 
 .img-intro {
     z-index: 10;
@@ -353,6 +350,7 @@ ul.simple {
   
     p {
       margin-top: 0;
+      max-width: 300px;
     }
 }
 
