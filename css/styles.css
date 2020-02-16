@@ -512,11 +512,6 @@ section, .top-nav {
   margin-bottom: 2rem;
   font-weight: 400; }
 
-.about .copy,
-.contact .copy,
-.project-list .copy {
-  min-width: 375px; }
-
 .sup {
   display: inline-block;
   height: 28px; }
