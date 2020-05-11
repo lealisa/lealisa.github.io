@@ -526,8 +526,7 @@ section, .top-nav {
   color: #7F8A8D;
   font-size: 1rem;
   opacity: 0;
-  transition: opacity .4s ease;
-  pointer-events: none; }
+  transition: opacity .4s ease; }
 
 .sup::before {
   margin-top: -5px;
