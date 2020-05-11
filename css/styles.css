@@ -552,7 +552,7 @@ section, .top-nav {
 #sup-4::after {
   content: "Carnegie Mellon University is a private research university based in Pittsburgh, Pennsylvania."; }
 #sup-4::before {
-  content: "4"; }
+  content: "2"; }
 
 .sup:hover::after,
 .sup:hover::before {
